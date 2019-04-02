@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="formation" type="typeFormation"/>
+<xsd:complexType name="typeFormation">
+<xsd:attribute name="intitule" type="xsd:string" use="required"/>
+<xsd:sequence>
+<xsd:element ref="responsable" /> <xsd:element ref="etudiant"/>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="etudiant" type="typeEtudiant"/>
+<xsd:complexType name="typeEtudiant">
+<xsd:attribute name="prenom" type="xsd:string" use="required"/>
+<xsd:attribute name="nom" type="xsd:string" use="required"/>
+</xsd:complexType>
+<xsd:element name="responsable" type="typeResponsable"/>
+<xsd:complexType name="typeResponsable">
+<xsd:attribute name="nom" type="xsd:string"/>
+</xsd:complexType>
+</xsd:schema>
